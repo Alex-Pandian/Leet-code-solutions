@@ -1,0 +1,9 @@
+class Solution:
+    def largestPerimeter(self, x: List[int]) -> int:
+        x.sort()
+        for i in range(len(x)-3,-1,-1):
+            if x[i] + x[i+1] > x[i+2]:
+                return x[i] + x[i+1] + x[i+2]
+        return 0
+sol=Solution()
+sol.largestPerimeter([input().split(','])
